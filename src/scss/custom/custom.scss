@@ -1,0 +1,244 @@
+@import "variable";
+@import "navbar";
+@import "login";
+
+body {
+  background: $gray-150;
+}
+
+.logo-hipe {
+  width: 41px;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.font-13 {
+  font-size: 13px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+}
+
+.font-22 {
+  font-size: 22px !important;
+}
+
+.text-navy {
+  color: $primary-navy;
+}
+
+.text-gray-soft {
+  color: $gray-1;
+}
+
+.text-secondary {
+  color: $gray-2 !important;
+}
+
+.highlightedText {
+  color: $primary;
+}
+
+.border-hide {
+  border: 0px !important;
+}
+
+.border-top {
+  border-top: 1px solid $gray-400 !important;
+}
+.border-right {
+  border-right: 1px solid $gray-400 !important;
+}
+.border-right-gray {
+  border-right: 2px solid $gray-400 !important;
+}
+.border-bottom {
+  border-bottom: 1px solid $gray-400 !important;
+}
+.border-left {
+  border-left: 1px solid $gray-400 !important;
+}
+.card-border-radius {
+  border-radius: 4px;
+  border: 1px solid $gray-400 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-disabled {
+  cursor: not-allowed;
+}
+
+.card-border-radius-2 {
+  border-radius: 24px 8px 8px 8px;
+}
+
+.box-shadow-card {
+  box-shadow: 0 0rem 0.25rem rgba(0, 0, 0, 0.45) !important;
+}
+
+.box-shadow-card-soft {
+  box-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.height-full {
+  height: 100%;
+}
+
+.btn-secondary {
+  border-radius: 6px !important;
+  border: solid 1px $gray-400 !important;
+  background-color: $gray-200 !important;
+  color: $dark;
+  span {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  &:hover {
+    color: $dark !important;
+  }
+}
+
+.label-action {
+  &.text-danger {
+    &.hover,
+    &:hover {
+      font-weight: bold;
+      color: $red !important;
+    }
+  }
+  &.hover,
+  &:hover {
+    font-weight: bold;
+    color: $primary-navy !important;
+  }
+}
+
+input[type="checkbox" i] {
+  background-color: $primary-navy !important;
+}
+
+@media (min-width: 768px) {
+  .col-md-5-5 {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+.img-avatar {
+  border-radius: 50%;
+}
+
+// background
+.bg-gray-soft {
+  background: #f8f9fe;
+}
+
+.bg-secondary-soft {
+  background: #e0e0e0;
+}
+
+.bg-gradien-blue {
+  background: linear-gradient(118.35deg, #3152ff 0%, #500fe2 100%);
+}
+
+.bg-card-green {
+  background: #06d2ae;
+}
+
+.bg-card-blue {
+  background: #12afe1;
+}
+
+.bg-light {
+  background-color: $gray-150 !important;
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #96969a !important;
+}
+
+.bg-gradient-card {
+  background: linear-gradient(133.38deg, #00e0c5 0%, #682eeb 100%) !important;
+}
+
+.dropdown-item {
+  &:active {
+    text-decoration: none;
+    background-color: $gray-400 !important;
+  }
+}
+
+#react-paginate {
+  ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  li {
+    display: inline-block;
+  }
+}
+.custom-file {
+  position: relative; // For focus state's z-index
+  flex: 1 1 auto;
+  // Add width 1% and flex-basis auto to ensure that button will not wrap out
+  // the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
+  margin-bottom: 0;
+
+  + .form-control,
+  + .custom-select,
+  + .custom-file {
+    margin-left: -$input-border-width;
+  }
+}
+
+// Bring the "active" form control to the top of surrounding elements
+> .form-control:focus,
+> .custom-select:focus,
+> .custom-file .custom-file-input.focus ~ .custom-file-label {
+  z-index: 3;
+}
+
+> .form-control,
+> .custom-select {
+  &:not(:last-child) {
+    @include border-right-radius(0);
+  }
+  &:not(:first-child) {
+    @include border-left-radius(0);
+  }
+}
+
+// Custom file inputs have more complex markup, thus requiring different
+// border-radius overrides.
+> .custom-file {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) .custom-file-label,
+  &:not(:last-child) .custom-file-label::after {
+    @include border-right-radius(0);
+  }
+  &:not(:first-child) .custom-file-label {
+    @include border-left-radius(0);
+  }
+}

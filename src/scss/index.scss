@@ -1,0 +1,9 @@
+@import "./bootstrap/bootstrap.scss";
+@import "./custom/custom.scss";
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

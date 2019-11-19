@@ -1,0 +1,94 @@
+.navbar {
+  background-color: $white;
+  border-bottom: 2px solid $gray-200;
+  &.nav-second {
+    height: 54px !important;
+    .nav-link {
+      text-align: center;
+      color: $gray-600;
+      font-weight: 400;
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      border-bottom: solid 3px #ffffff;
+      &.active,
+      &:active,
+      &.hover,
+      &:hover {
+        font-weight: bold;
+        color: $primary-navy !important;
+        background-color: $white;
+      }
+      &.disabled {
+        color: $gray-500;
+      }
+    }
+  }
+  .navbar-brand {
+    font-weight: 700;
+  }
+  .nav-link {
+    text-align: center;
+    color: $gray-600;
+    font-weight: bold;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom: solid 3px #ffffff;
+    &.active,
+    &:active,
+    &.hover,
+    &:hover {
+      color: $primary-navy !important;
+    }
+    &.disabled {
+      color: $gray-500;
+    }
+  }
+}
+.nav {
+  &.flex-column {
+    .nav-link {
+      color: $gray-600;
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      border-left: solid 6px #ffffff;
+      &.active,
+      &:active,
+      &.hover,
+      &:hover {
+        font-weight: bold;
+        color: $gray-900 !important;
+        border-left: solid 6px $primary;
+      }
+      &.disabled {
+        color: $gray-500;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    .navbar-brand {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    &.navbar-second {
+      height: 54px !important;
+    }
+    height: 72px;
+    padding: 0 3rem 0 3rem;
+    .nav-item {
+      margin: 0rem 1rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 8rem 0 8rem;
+  }
+}
